@@ -1,0 +1,359 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic (CALLED IN NORMALIZE.CSS)
+	- Normalize
+	- Box sizing
+	- Media width
+# Base
+	- Typography
+	- Elements
+	- Links
+# Layouts
+# Components
+	- Header
+	- Main
+	- Sidebar
+	- Footer
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+
+/* Typography
+--------------------------------------------- */
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #282828;
+  background-color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.5em 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+p {
+  margin: 0 0 1.5em;
+}
+
+/* section{
+ margin: 20px auto 30px; 
+ width: 75rem;   
+ 
+} */
+
+/* Links
+--------------------------------------------- */
+a,
+a:visited {
+  color: #347034;
+}
+
+a:hover,
+a:focus {
+  color: #234723;
+}
+
+a:active {
+  color: #ffffff;
+  background-color: #234723;
+}
+
+/* Elements
+--------------------------------------------- */
+ul,
+ol {
+  margin: 1em 0;
+  padding: 0 0 0 2.5em;
+}
+
+/* Layout */
+
+.site-wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+}
+.site-main {
+  max-width: 75rem;
+  margin: 0 auto 0;
+}
+/* header */
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #3a9778;
+  color: #fff;
+  font-size: 1.5rem;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5rem;
+  z-index: 999;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+header nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+header a {
+  text-decoration: none;
+  color: #fff;
+}
+header .logo-name {
+  border: #fff 5px solid;
+  padding: 7px 12px;
+  border-radius: 50%;
+  margin-left: 5rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+header ul {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+}
+header a:visited {
+  color: #fff;
+}
+
+header ul li a:hover {
+  color: #379777;
+  background: #fff;
+}
+/* hamberger menu */
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* mobile vertion for header */
+@media (max-width: 768px) {
+  header nav {
+    transform: translateX(0);
+    left: 30px;
+  }
+  .nav-links {
+    display: none; /* Hide links on mobile */
+    position: absolute;
+    top: 32px;
+    left: -30px;
+    width: 250px;
+    background-color: #3a9778;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show menu on click */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger icon */
+  }
+}
+
+/* hero section */
+#hero {
+  height: 80vh;
+}
+.hero-content {
+  margin-top: 13rem;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-content h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: rgba(43, 58, 85, 0.8);
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: 5px;
+  color: rgba(43, 58, 85, 0.9);
+}
+.hero-content h1 span {
+  color: #379777;
+}
+
+.button-wrap {
+  display: flex;
+  gap: 3rem;
+}
+.big-cta {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  height: 50px;
+  width: 250px;
+  background-color: #2b3a55;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 15px 10px #2b3a5541;
+}
+
+.cta-2 {
+  background-color: transparent;
+  color: #2b3a55;
+  border: 2px solid #2b3a55;
+}
+
+.big-cta i {
+  font-size: 19px;
+  margin-left: 5px;
+}
+
+.cta-1:hover {
+  background-color: #379777;
+}
+.cta-2:hover {
+  background-color: #379777;
+  color: white;
+  border-color: #379777;
+}
+
+/* about section */
+.about {
+  border: #234723 solid 2px;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 10rem;
+}
+.about h2 {
+  font-weight: 500;
+  color: rgba(0, 4, 10, 0.8);
+}
+.about p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.7;
+  color: rgba(43, 58, 85, 0.7);
+  margin-bottom: 40px;
+  width: 90%;
+}
+
+
+
+/* projects */
+.projects {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+}
+
+.projects h2 {
+  text-align: center;
+  font-weight: 500;
+  color: rgba(0, 4, 10, 0.8);
+  margin-bottom: 2rem;
+}
+
+.projects .articles {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.articles article {
+  padding: 1.5rem;
+  background-color: #2b3a55;
+  border: #ecf1ef 2px solid;
+  width: 15rem;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+    /* Outer shadow */ 0 6px 20px rgba(0, 0, 0, 0.15); /* Softer, larger shadow */
+  transition: box-shadow 0.3s ease-in-out; /* Smooth shadow on hover */
+}
+
+.articles article a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* contact me */
+
+.contact {
+  text-align: center;
+  margin: 10rem 0;
+}
+.contact h2 {
+  font-weight: 500;
+  color: rgba(0, 4, 10, 0.8);
+  margin: 10rem 0 3rem;
+}
+/* footer */
+footer {
+  background-color: #2b3a55;
+  text-align: center;
+  padding: 2rem;
+  color: #fff;
+}
+
+footer p {
+  font-size: 0.8rem;
+}
+
+/* social  */
+
+.socials {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.socials i {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #f1f2f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #f6f7f9;
+  height: 20px;
+  width: 20px;
+  padding: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+  z-index: 1;
+  margin-bottom: 1rem;
+}
+
+.socials i:hover {
+  color: #379777;
+  border-color: #379777;
+  transform: scale(1.1) rotate(360deg);
+}
