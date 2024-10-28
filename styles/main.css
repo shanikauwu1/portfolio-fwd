@@ -184,7 +184,8 @@ header ul li a:hover {
 
 /* hero section */
 #hero {
-  height: 80vh;
+  height: 70vh;
+  margin-bottom: 5rem;
 }
 .hero-content {
   margin-top: 13rem;
@@ -289,6 +290,7 @@ header ul li a:hover {
   text-align: center;
   margin-bottom: 10rem;
   box-shadow: 0 15px 10px #2b3a5541;
+
 }
 .about h2 {
   font-weight: 500;
