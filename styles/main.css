@@ -129,6 +129,12 @@ header .logo-name {
   font-weight: 600;
   letter-spacing: 3px;
 }
+
+header .logo-name:hover {
+  border:#379777 5px solid;
+  color: #379777;
+ 
+}
 header ul {
   display: flex;
   gap: 3rem;
@@ -140,7 +146,7 @@ header a:visited {
 
 header ul li a:hover {
   color: #379777;
-  background: #fff;
+ 
 }
 /* hamberger menu */
 
@@ -282,6 +288,7 @@ header ul li a:hover {
   padding: 2rem;
   text-align: center;
   margin-bottom: 10rem;
+  box-shadow: 0 15px 10px #2b3a5541;
 }
 .about h2 {
   font-weight: 500;
@@ -323,27 +330,50 @@ header ul li a:hover {
 }
 
 .projects .articles {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-rows: repeat(2, 1fr);    /* 2 rows */
+  gap: 2rem; 
+  max-width: 75rem; 
+  margin: auto; 
 }
 
 .articles article {
   padding: 1.5rem;
-  background-color: #2b3a55;
   border: #ecf1ef 2px solid;
-  width: 15rem;
+  width: 20rem;
   border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
-    /* Outer shadow */ 0 6px 20px rgba(0, 0, 0, 0.15); /* Softer, larger shadow */
-  transition: box-shadow 0.3s ease-in-out; /* Smooth shadow on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out; 
+  transition: transform 0.3s ease; 
+  background-color: #2b3a55;
+  
 }
 
+.articles article:hover {
+  transform: translateY(-10px);
+}
+.articles article img {
+  align-items: center;
+}
 .articles article a {
-  color: #fff;
+  color:#f7f3f3;
   text-decoration: none;
+}
+
+.articles article p{
+  margin-top: .2rem;
+    margin-bottom: .3rem;
+}
+/* mobile vertion for project section */
+@media (max-width: 992px) {
+  .projects .articles {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }  
 }
 
 
@@ -360,7 +390,7 @@ header ul li a:hover {
 }
 /* footer */
 footer {
-  background-color: #3a9778;
+  background-color: #265F4D;
   text-align: center;
   padding: 2rem;
   color: #fff;
@@ -396,7 +426,7 @@ footer p {
 }
 
 .socials i:hover {
-  color: #379777;
-  border-color: #379777;
+  color:#2b3a55;
+  border-color: #2b3a55;
   transform: scale(1.1) rotate(360deg);
 }
