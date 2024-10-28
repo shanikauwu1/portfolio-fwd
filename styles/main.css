@@ -54,11 +54,13 @@ p {
   margin: 0 0 1.5em;
 }
 
-/* section{
- margin: 20px auto 30px; 
- width: 75rem;   
+section{
+
+    padding-top: 5rem; 
+    margin-top: -5rem; 
+
  
-} */
+}
 
 /* Links
 --------------------------------------------- */
@@ -184,7 +186,7 @@ header ul li a:hover {
 
 /* hero section */
 #hero {
-  height: 70vh;
+  height: 80vh;
   margin-bottom: 5rem;
 }
 .hero-content {
@@ -216,21 +218,30 @@ header ul li a:hover {
   display: flex;
   gap: 3rem;
 }
+
 .big-btn {
   font-size: 1.1rem;
   font-weight: 600;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   height: 50px;
   width: 250px;
   background-color: #2b3a55;
-  color: white;
   border-radius: 5px;
   cursor: pointer;
-  transition: all 0.2s;
   box-shadow: 0 15px 10px #2b3a5541;
+  text-align: center;
+  padding: 1rem  1rem 3rem ;
+  transition:  0.2s ease-in-out;
+  text-decoration: none;
+  display: block;
+  margin: 0 auto;
+}
+.big-btn.cta-1{
+  color: #f7f3f3;
+  border: 2px solid #2b3a55;
 }
 
-.cta-2 {
+.big-btn.cta-2{
   background-color: transparent;
   color: #2b3a55;
   border: 2px solid #2b3a55;
@@ -243,15 +254,17 @@ header ul li a:hover {
 
 .cta-1:hover {
   background-color: #379777;
+  color: #f7f3f3;
+  border: 2px solid #379777;
 }
 .cta-2:hover {
   background-color: #379777;
-  color: white;
+  color: #f7f3f3;
   border-color: #379777;
 }
 
 /* mobile vertion for hero section */
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .hero-content h1 {
     text-align: center;
   }
@@ -282,16 +295,21 @@ header ul li a:hover {
 
 /* about section */
 
-
 .about {
-  border: #234723 solid 2px;
-  border-radius: 10px;
-  padding: 2rem;
-  text-align: center;
-  margin-bottom: 10rem;
-  box-shadow: 0 15px 10px #2b3a5541;
+  
+ 
 
 }
+
+.about-wrapper{
+  padding: 2rem;
+  text-align: center;
+  margin: 10rem 0;
+  border: #234723 solid 2px;
+  border-radius: 10px;
+  box-shadow: 0 15px 10px #2b3a5541;
+}
+
 .about h2 {
   font-weight: 500;
   color: rgba(0, 4, 10, 0.8);
