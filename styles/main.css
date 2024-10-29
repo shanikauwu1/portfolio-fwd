@@ -176,7 +176,12 @@ header ul li a:hover {
     background-color: #3a9778;
     flex-direction: column;
     padding: 10px;
+    
   }
+  .nav-links li{
+    margin-left: 1.2rem;
+  }
+
 
   .nav-links.active {
     display: flex; /* Show menu on click */
@@ -190,7 +195,7 @@ header ul li a:hover {
 /* hero section */
 #hero {
   height: 80vh;
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
 }
 .hero-content {
   margin-top: 13rem;
@@ -268,14 +273,16 @@ header ul li a:hover {
 
 /* mobile vertion for hero section */
 @media (max-width: 1200px) {
+  #hero {
+  
+    margin-bottom: 10rem;
+  }
   .hero-content h1 {
     text-align: center;
   }
 }
 @media (max-width: 768px) {
-  #hero {
-    height: 50vh;
-  }
+  
   .hero-content {
     margin-top: 7rem;
     
@@ -294,6 +301,20 @@ header ul li a:hover {
    flex-direction: column;
     gap: 3rem;
   }
+
+  @media (max-width: 479px) {
+    .big-btn {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      height: 50px;
+      width: 250px;
+      text-align: center;
+      padding: 0.5rem  1rem 1.5rem ;
+     
+    }
+  }
+
 }
 
 /* about section */
@@ -323,12 +344,19 @@ header ul li a:hover {
 /* media queries for about section */
 @media (max-width: 1200px) {
   .about {
-    padding: .5rem;
+   padding: .5rem;
     margin: 3rem 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 3rem; 
   
   } 
 }
+
+@media (max-width: 479px) {
+   .about{
+    margin-top: 15rem;
+   }
+   
+  }
 
 
 
@@ -390,7 +418,14 @@ header ul li a:hover {
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 2rem;
-  }  
+  } 
+
+}
+  
+  @media (max-width: 479px) {
+   .articles article{
+      max-width: 16rem;
+   }
 }
 
 
@@ -406,6 +441,12 @@ header ul li a:hover {
   margin: 10rem 0 3rem;
 }
 
+@media (max-width: 479px) {
+  .contact {
+    margin: 3rem 0;
+
+}
+}
 
 /* footer */
 footer {
