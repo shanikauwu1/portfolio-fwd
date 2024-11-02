@@ -156,7 +156,7 @@ header ul.nav-links.active {
 /* Hero Section */
 #hero {
   height: 80vh;
-  margin-bottom: 3rem;
+  margin: 5rem auto 3rem;
 }
 
 .hero-content {
